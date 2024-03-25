@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Heading, Text, VStack, HStack, Image, Divider, Icon, Container } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, HStack, Image, Divider, Icon, Container, Button } from "@chakra-ui/react";
 import { FaUserCircle, FaChartBar, FaHistory, FaChartPie, FaListAlt, FaClipboardList, FaTasks, FaCog } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const PhaseCard = ({ icon, title, description }) => (
   <Box p={6} borderWidth={1} borderRadius="lg" textAlign="center">
@@ -43,9 +44,13 @@ const Index = () => {
 
       <Divider my={12} />
 
-      <Text fontSize="lg" textAlign="center">
+      <Text fontSize="lg" textAlign="center" mb={8}>
         This data-driven methodology empowers coaches, athletes, and analysts to make informed decisions, unlocking the full potential of every athlete.
       </Text>
+
+      <Button as={Link} to="/athlete-profiles" colorScheme="blue" size="lg" mx="auto" display="block">
+        View Athlete Profiles
+      </Button>
 
       <Image src="https://images.unsplash.com/photo-1620213391117-0d169a917221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxhdGhsZXRlcyUyMHRyYWluaW5nJTIwd2l0aCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzExMzMwNDk3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Athletes training with technology" mt={12} mx="auto" />
     </Container>
